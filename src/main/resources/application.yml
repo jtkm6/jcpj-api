@@ -1,0 +1,38 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://${db.host:localhost}:${db.port:5432}/${db.name:jcpj}
+    username: ${db.uid:postgres}
+    password: ${db.pwd:poiuytrewq}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      ddl-auto: update
+    open-in-view: false
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 1024MB
+      max-request-size: 2048MB
+
+  main:
+    allow-bean-definition-overriding: true
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+check-user-scopes: true
+
+
+
+
