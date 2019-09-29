@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://${db.host:localhost}:${db.port:5432}/${db.name:jcpj}
+    url: jdbc:postgresql://${db.host:localhost}:${db.port:5432}/${db.name:postgres}
     username: ${db.uid:postgres}
     password: ${db.pwd:poiuytrewq}
   jpa:
