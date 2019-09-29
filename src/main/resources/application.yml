@@ -23,7 +23,6 @@ spring:
       file-size-threshold: 2MB
       max-file-size: 1024MB
       max-request-size: 2048MB
-
   main:
     allow-bean-definition-overriding: true
 logging:
@@ -31,7 +30,7 @@ logging:
     org:
       springframework:
         security: DEBUG
-check-user-scopes: true
+check-user-scopes: false
 
 
 
